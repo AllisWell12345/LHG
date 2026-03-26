@@ -24,6 +24,7 @@
 
         // 연습1) 아래 변수에 저장된 값을 <div> 태그로 화면에 표시하세요.
         const name = 'Tom';
+
         const nameElement = <div>{name}</div>;
 
         // root.render(nameElement);
@@ -36,6 +37,7 @@
         }
 
         const carElement = <div>{car.model}</div>;
+
         // root.render(carElement);
 
         // 연습3) 아래 score 값이 60 이상이면 "합격", 아니면 "불합격"을 <div> 태그로 화면에 표시하세요.
@@ -59,9 +61,9 @@
 
         // 연습5) 아래 color 값이 "r"이면 "red", "g"이면 "green", "b"이면 "blue" 배경색을 <div> 태그에 적용해 화면에 표시하세요.
         //       (100 x 100 크기)
-        // const color = 'r';
+        const color = 'r';
         // const color = 'g';
-        const color = 'b';
+        // const color = 'b';
 
         const bgColor = color === 'r'
             ? 'red'
@@ -78,6 +80,7 @@
         }
 
         const styleElement = <div style={style}></div>;
+        
         root.render([
             nameElement,
             carElement,
