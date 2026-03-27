@@ -30,14 +30,10 @@
                     {/* 미션4) 아래와 같이 컴포넌트를 호출할 때 내부 요소로 전달한 값을 정사각형의 너비로 계산하여 정사각형의 넓이를 출력하는 컴포넌트를 구현하세요. */}
                     <Square>5</Square>
                     <Square>10</Square>
-                    
-                    
-
-
                 </>
             )
         }
-        
+
         // 각 미션에 해당하는 컴포넌트들 만들어보기
 
         const ColorBox = ({ color }) => {
@@ -52,24 +48,24 @@
             )
         }
 
-        const Items = ({data}) => {
+        const Items = ({ data }) => {
             console.log(data);
             return (
                 <ul>
-                    {data.map((dataItem, index) => <li key = {index}>{dataItem}</li>)}
+                    {data.map((dataItem, index) => <li key={index}>{dataItem}</li>)}
                 </ul>
             )
         }
 
-        const Person = ({friend}) => {
+        const Person = ({ friend }) => {
             console.log(friend);
-            const {name, age} = friend;
+            const { name, age } = friend;
             return (
                 <h3>이름: {name}, 나이: {age}</h3>
             )
         }
 
-        const Square = ({children}) => {
+        const Square = ({ children }) => {
             console.log(children);
             const result = children * children;
             console.log(result);
