@@ -7,7 +7,7 @@ function Counter() {
     setNumber(number + 1);
   };
   const handleNumberDecrease = () => {
-    setNumber(number - 1);
+    setNumber((prev) => prev - 1);
   };
   const handleNumberReset = () => {
     setNumber(0);
