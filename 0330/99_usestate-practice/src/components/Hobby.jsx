@@ -13,9 +13,9 @@ function Hobby() {
       ...isChecked,
       [e.target.name]: e.target.checked,
     });
-    console.log(isChecked);
-    console.log(e.target.checked);
   };
+
+  const checkedOutput = Object.keys(isChecked).filter((key) => isChecked[key]);
 
   return (
     <>
@@ -57,17 +57,7 @@ function Hobby() {
       <br />
       <h3>선택된 취미</h3>
       <div>
-        {!isChecked.reading &&
-        !isChecked.music &&
-        !isChecked.sports &&
-        !isChecked.coding
-          ? "없음"
-          : [
-              isChecked.reading ? "reading" : "",
-              isChecked.music ? "music" : "",
-              isChecked.sports ? "sports" : "",
-              isChecked.coding ? "coding" : "",
-            ].join(", ")}
+        {checkedOutput.length === 0 ? "없음" : checkedOutput.join(", ")}
       </div>
     </>
   );

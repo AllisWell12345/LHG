@@ -44,7 +44,7 @@ function UserInfo() {
       <br />
       <h3>프로필</h3>
       <div>
-        {user.userName} ({user.userAge})
+        {user.userName} ({user.userAge}세)
       </div>
       <div>📧 {user.userEmail}</div>
     </>
