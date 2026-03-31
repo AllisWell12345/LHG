@@ -56,9 +56,7 @@ function Hobby() {
       <label htmlFor="coding">💻코딩</label>
       <br />
       <h3>선택된 취미</h3>
-      <div>
-        {checkedOutput.length === 0 ? "없음" : checkedOutput.join(", ")}
-      </div>
+      <div>{checkedOutput.length > 0 ? checkedOutput.join(", ") : "없음"}</div>
     </>
   );
 }
