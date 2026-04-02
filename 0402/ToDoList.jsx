@@ -37,6 +37,13 @@ function ToDoList() {
     setInputValue("");
   };
 
+  const handleAddEnter = (e) => {
+    if (e.key === "Enter") {
+      setToDoList([...toDoList, inputValue]);
+      setInputValue("");
+    }
+  };
+
   const inputRef = useRef();
 
   useEffect(() => {
@@ -51,6 +58,7 @@ function ToDoList() {
         ref={inputRef}
         value={inputValue}
         onChange={handleInputChange}
+        onKeyDown={handleAddEnter}
       />
       <button onClick={handleAddClick}>추가</button>
       <br />
